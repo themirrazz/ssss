@@ -1,0 +1,11 @@
+.header {
+    background-color: transparent;
+    background: transparent;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#af000000,endColorStr=#af000000);
+}
+
+#SystemAlertDarkness {
+    background-color: transparent;
+    background: transparent;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7f000000,endColorStr=#7f000000);
+}
