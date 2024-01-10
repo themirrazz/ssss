@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang='es'>
+    <head>
+        <title>Convertir MIDI a Desmos - /elmirrazz</title>
+        <link rel="stylesheet" href="/index.css" />
+        <link rel="stylesheet" href="/index-dark.css" />
+        <link rel='icon' href='/favicon.ico' />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="og:site_name" content="Git de themirrazz" />
+        <meta name="og:title" content="Convertir MIDI a Desmos" />
+        <script src='/musical-desmos.js'></script>
+        <meta name="og:description" content="Convert MIDI files to Desmos code" />
+        <style>
+            code { user-select: all; border: 1px solid grey; }
+            textarea {
+                width: calc(100% - 10px);
+                border: 2px solid black;
+                background-color: white;
+                color: black;
+                padding: 3px;
+                height: 400px;
+            }
+            @media (prefers-color-scheme: dark) {
+                textarea {
+                    border: 2px solid white;
+                    background-color: black;
+                    color: white;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class='header'>
+            <span class='header-left'>
+                <img class='header-options' src='/options.png' />
+                <img class='header-logo' src='/themirrazz-small.png' />
+            </span>
+            <img id="hsep" class='header-seperator' src='/clear0.png' style='width: 1px;' />
+            <span class='header-right'>
+                <img class='header-spread' src='/share.png' />
+                <img class='header-translate' src='/translate.png' />
+            </span>
+        </div>
+        <div style='display:none;' class='localize-menu'>
+            <a class='localize-link localize-current'>
+                English
+            </a>
+            <a class='localize-link' href='#'>
+                Español
+            </a>
+            <a class='localize-link' href='#'>
+                Français
+            </a>
+            <a class='localize-link' href='#'>
+                Deustch
+            </a>
+            <a class='localize-link' href='#'>
+                中文
+            </a>
+            <a class='localize-link' href='#'>
+                &#x65E5;&#x672C;&#x8A9E;
+            </a>
+            <a class='localize-link' href='#'>
+                العربية
+            </a>
+        </div>
+        <div style='display: none' class='hamburger-menu'>
+            <span>Navigation</span>
+            <a class='hamburger-link' href='/'>
+                /
+            </a>
+            <a class='hamburger-link' href='https://themirrazz.vercel.app/'>
+                Website
+            </a>
+            <a class='hamburger-link' href='https://github.com/themirrazz'>
+                GitHub
+            </a>
+        </div>
+        <div class='share-dialog' style='display:none'>
+            <div class='share-dialog-services'>
+                <a class='share-dialog-service' id='ShareViaEmail'>
+                    <img src='/social-color/apple-mail.png' />
+                    <span>E-mail</span>
+                </a>
+                <a class='share-dialog-service' id='ShareViaSMS'>
+                    <img src='/social-color/imessage.png' />
+                    <span>SMS</span>
+                </a>
+                <a class='share-dialog-service' id='ShareViaTwitter'>
+                    <img src='/social-color/twitter.png' />
+                    <span>Twitter</span>
+                </a>
+                <a class='share-dialog-service' id='ShareViaReddit'>
+                    <img src='/social-color/reddit.png' />
+                    <span>Reddit</span>
+                </a>
+                <a class='share-dialog-service' id='NativeShare'>
+                    <img src='/social-color/native.png' />
+                    <span>More</span>
+                </a>
+            </div>
+            <div class='share-dialog-tiny-spacer'></div>
+            <div class='share-dialog-cancel-container'>
+                <div class='share-dialog-cancel'>
+                    Cancelar
+                </div>
+            </div>
+        </div>
+        <div class='hvspace'></div>
+        <p class='article-title'>Convertir MIDI a Desmos</p>
+        <p>
+             Paso 1. Utilice <a href='https://tonejs.github.io/Midi/' target='_blank'>este sitio web</a> para convertir un archivo MIDI en un archivo JSON compatible con ToneJS.<br/>
+             Paso 2. Copie la salida JSON en el cuadro de texto a continuación
+         </p>
+        <textarea id='midi-data'></textarea>
+        <p>
+             Paso 3. Presione el botón de abajo para compilar<br/>
+             <button onclick='CompileDesmosData()'>Compilar</button><br/>
+             Paso 4. Copie el código siguiente y péguelo en <a href='https://www.desmos.com/calculator' target='_blank'>Desmos</a><br/>
+         </p>
+        <textarea id='desmos-lines'></textarea>
+        <p>
+             Paso 5. Desplácese hasta la parte superior y seleccione la variable <code>b</code><br/>
+             Paso 6. Establezca el mínimo en <code>0</code>, el máximo en <code>d+0.125</code> y el paso a <code>0.125</code><br/>
+             Paso 7. Presione el botón "+" y agregue un ticker<br/>
+             Paso 8. Pegue <code>\left\{b\ge d:b\to0,b&lt;d:b\to b+0.125\right\}</code> en la sección `ejecutar` del ticker<br/ >
+             Paso 9. Pegue <code>\frac{60000}{t}\cdot0.5</code> en la sección 'cada ____ ms' del ticker<br/>
+             Paso 10. Presiona el botón para activar el silencio, inicia el ticker, ¡disfruta de la música!
+         </p>
+    </body>
+    <script src='/hsep.js'></script>
+    <script src='/share.js'></script>
+    <script src='/whopper.js'></script>
+    <script src='/translate.js'></script>
+    <script>
+        function CompileDesmosData() {
+            try {
+                var midi = JSON.parse(
+                    document.querySelector('#midi-data').value
+                );
+                var data = MidiJSONToDesmos(midi);
+                document.querySelector('#desmos-lines').innerText = data.lines;
+            } catch (error) {
+                alert(error.stack);
+            }
+        }
+    </script>
+</html>
