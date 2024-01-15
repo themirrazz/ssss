@@ -1,0 +1,11 @@
+{
+   "name": "themirrazz Japanese-to-English",
+   "description": "hai arigato gozaimasu",
+   "author": "themirrazz",
+   "languages": [
+      {
+         "name": "English (From Japanese)",
+         "id": "jpn-eng"
+      }
+   ]
+}
