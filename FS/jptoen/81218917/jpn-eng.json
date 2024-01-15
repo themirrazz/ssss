@@ -109,24 +109,24 @@
         "end": 81.04
     },
     {
-        "start": 81.125,
+        "start": 81.12,
         "lines": ["Ehh... I don't like weird kids..."],
-        "ends": 83.25
+        "end": 83.25
     },
     {
-        "start": 83.333,
+        "start": 83.33,
         "lines": [ "And Summer?" ],
-        "ends": 84.333
+        "end": 84.33
     },
     {
         "start": 84.41,
         "lines": [ "That's fine." ],
-        "ends": 85.2
+        "end": 85.2
     },
     {
         "start": 85.7,
-        "lines": [ "Uh... she sucks!" ],
-        "ends": 86.666
+        "lines": [ "She sucks!" ],
+        "end": 86.66
     },
     {
         "start": 87.6,
@@ -136,20 +136,20 @@
     {
         "start": 89.62,
         "lines": [ "I'll put you to sleep tonight, Kayla." ],
-        "end": 93.50
+        "end": 92.50
     },
     {
-        "start": 93.51,
-        "lines": [ "Grown-ups are practically adults! But...", "But mom-" ],
+        "start": 92.51,
+        "lines": [ "5th graders are practically adults! But...", "But mom-" ],
         "end": 94.83
     },
     {
         "start": 94.842,
         "lines": [ "I'm not going to drink coffee or date, but I'll fill my own water bottle and do my hair.", "W-" ],
-        "end": 99.02
+        "end": 98.02
     },
     {
-        "start": 100,
+        "start": 98.03,
         "lines": [ "Everyone has bangs, and my forhead's getting bigger, but I don't want to", "look like an alien or float while people go-"],
         "end": 105.123
     },
@@ -187,5 +187,137 @@
         "start": 119.1,
         "lines": [ "My allergies are slowly being cured." ],
         "end": 122.3
+    },
+    {
+        "start": 124.04,
+        "lines": ["If this medicine works, I'll want to try", " the peanut chicken!"],
+        "end": 129.9
+    },
+    {
+        "start": 131.5,
+        "lines": ["Welcome, 5th grade students, here we are!"],
+        "end": 134.7
+    },
+    {
+        "start": 134.8,
+        "lines": [ "Everyone's classrooms are on the second floor!" ],
+        "end": 140.62
+    },
+    {
+        "start": 140.7,
+        "end": 142.12,
+        "lines": ["Yes!"]
+    },
+    {
+        "start": 145.04,
+        "lines": [ "Watch out for the little ones!" ],
+        "end": 152.04
+    },
+    {
+        "start": 150.3,
+        "lines": [ "Are you going to Westlake Junior High?" ],
+        "end": 152.04
+    },
+    {
+        "start": 152.1,
+        "lines": [ "I've heard there's a kid there that smokes cigarettes." ],
+        "end": 156.666
+    },
+    {
+        "start": 154.75,
+        "lines": [ "What do you see?" ],
+        "end": 155.75
+    },
+    {
+        "start": 155.8,
+        "lines": [ "Nothing, I just hear a lot of voices." ],
+        "end": 157.9
+    },
+    {
+        "start": 158,
+        "lines": [ "Ah, now I can see." ],
+        "end": 158.666
+    },
+    {
+        "start": 158.75,
+        "lines": [ "This year's 5th grade class is also full of brainless kids. "],
+        "end": 162.83
+    },
+    {
+        "start": 162.9,
+        "end": 164.9,
+        "lines": ["Kabir, Anthony, good morning!"]
+    },
+    {
+        "start": 165.04,
+        "end": 166.84,
+        "lines": [
+            "Hey, you from New York?",
+        ]
+    },
+    {
+        "start": 166.99,
+        "end": 168.1666,
+        "lines": [ "The Patriots are shit!" ]
+    },
+    {
+        "start": 168.2,
+        "end": 169.5,
+        "lines": [ "That's New England." ]
+    },
+    {
+        "start": 169.58,
+        "end": 171.29,
+        "lines": [ "Your shirt's on the wrong way." ]
+    },
+    {
+        "start": 171.37,
+        "end": 172.33,
+        "lines": [ "What?!" ]
+    },
+    {
+        "start": 172.41,
+        "end": 174.04,
+        "lines": [ "Look at them. They're so talkative!" ]
+    },
+    {
+        "start": 174.12,
+        "end": 175.6,
+        "lines": ["Mmm... it's the same every year."]
+    },
+    {
+        "start": 175.75,
+        "end": 177.6,
+        "lines": ["I saw Kara wearing clothes from Gymboree."]
+    },
+    {
+        "start": 177.708,
+        "end": 179.04,
+        "lines": [ "The \"Good Looks\"." ]
+    },
+    {
+        "start": 179.12,
+        "end": 179.83,
+        "lines": [ "Saucy." ]
+    },
+    {
+        "start": 179.9,
+        "end": 181.25,
+        "lines": ["The \"appearances are life\" kids."]
+    },
+    {
+        "start": 181.333,
+        "lines": [ "Apparently only 11 years old." ],
+        "end": 182.5
+    },
+    {
+        "start": 182.5,
+        "lines": ["The kid who comes to school even though they're sick."],
+        "end": 184.6
+    },
+    {
+        "start": 184.7,
+        "lines": ["Always one."],
+        "end": 186
     }
 ]
