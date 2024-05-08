@@ -3,12 +3,8 @@
   console.log('Sval Version: ' + Sval.version)
 
 var interpreter = new Sval()
-
-interpreter.import({
-  getItem: n => new Promise(resolve => setTimeout(resolve, 1500, n))
-})
-
 interpreter.run(`
+var getItem = function (n) {return new Promise(resolve => setTimeout(resolve, 1500, n))};
   !async function () {
     for (const i of [1, 2, 3]) {
       console.log(await getItem(i))
