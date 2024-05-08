@@ -1,0 +1,21 @@
+<script type="text/javascript" src="https://unpkg.com/sval"></script>
+<script>
+  console.log('Sval Version: ' + Sval.version)
+
+var interpreter = new Sval()
+
+interpreter.import({
+  getItem: n => new Promise(resolve => setTimeout(resolve, 1500, n))
+})
+
+interpreter.run(`
+  !async function () {
+    for (const i of [1, 2, 3]) {
+      console.log(await getItem(i))
+    }
+  }()
+  exports.end = true
+`)
+
+console.log('End: ' + interpreter.exports.end)
+</script>
